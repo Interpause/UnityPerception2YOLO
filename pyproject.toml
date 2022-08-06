@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "unityperception2yolo"
+version = "0.1.0"
+description = "Converts Unity Perception dataset format to YOLO format."
+authors = ["John-Henry Lim <42513874+Interpause@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+datasetinsights = "^1.1.2"
+rich = "^12.5.1"
+
+[tool.poetry.group.dev.dependencies]
+#black = "^22.6.0"
+#poethepoet = "^0.16.0"
+black = "^22.6.0"
+poethepoet = "^0.16.0"
+pyinstaller = "^5.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
