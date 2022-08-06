@@ -6,14 +6,32 @@ authors = ["John-Henry Lim <42513874+Interpause@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
 
+[tool.poe.tasks]
+_rem_cv2 = "pip uninstall -y opencv-python opencv-python-headless opencv-contrib-python opencv-contrib-python-headless"
+_add_cv2 = "pip install opencv-python-headless>=4.5,<4.6"
+post-install = ["_rem_cv2", "_add_cv2"]
+build-windows = """\
+pyinstaller unityperception2yolo\\__main__.py \
+--name unityperception2yolo \
+--noconfirm \
+--onefile \
+"""
+build-linux = """\
+pyinstaller unityperception2yolo/__main__.py \
+--name unityperception2yolo \
+--noconfirm \
+--onefile \
+"""
+
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
 datasetinsights = "^1.1.2"
 rich = "^12.5.1"
+fire = "^0.4.0"
+imagesize = "^1.4.1"
+pandas = "<1.4.0"
 
 [tool.poetry.group.dev.dependencies]
-#black = "^22.6.0"
-#poethepoet = "^0.16.0"
 black = "^22.6.0"
 poethepoet = "^0.16.0"
 pyinstaller = "^5.3"
