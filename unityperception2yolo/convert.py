@@ -319,7 +319,7 @@ class Converter:
 
         with open(label_path / f"{row['image_id']}.txt", "w") as f:
             f.write(
-                "/n".join(
+                "\n".join(
                     f"{b['i']} {b['x']} {b['y']} {b['w']} {b['h']}"
                     for b in row["annotations"]
                 )
