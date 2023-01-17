@@ -1,3 +1,7 @@
+# Archived
+
+Obsolete. Use https://github.com/Unity-Technologies/com.unity.perception/blob/main/com.unity.perception/Documentation~/Tutorial/convert_to_coco.md followed by https://github.com/ultralytics/JSON2YOLO instead.
+
 # UnityPerception2YOLO
 
 Converts Unity Perception dataset format to YOLO format.
